@@ -22,16 +22,16 @@ namespace RomanNumeralConverter
 
         public static int RomanToInteger(string roman)
         {
-            int number = 0;
-            for (int i = 0; i < roman.Length; i++)
+            int number = 0; //Starting Number is 0
+            for (int i = 0; i < roman.Length; i++) //Looks at the length of the string, increments i variable by 1
             {
-                if (i + 1 < roman.Length && RomanMap[roman[i]] < RomanMap[roman[i + 1]])
+                if (i + 1 < roman.Length && RomanMap[roman[i]] < RomanMap[roman[i + 1]]) // if length of numeral falls in these parameters
                 {
-                    number -= RomanMap[roman[i]];
+                    number -= RomanMap[roman[i]]; // Subtract from the number variable
                 }
                 else
                 {
-                    number += RomanMap[roman[i]];
+                    number += RomanMap[roman[i]]; // Add to the number variable
                 }
             }
             return number;

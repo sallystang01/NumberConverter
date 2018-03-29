@@ -19,17 +19,39 @@ namespace RomanNumeralConverter
 
         private void calculateBTN_Click(object sender, EventArgs e)
         {
-            int converted;
-           converted = NumberConverter.RomanToInteger(inputTB.Text);
+            try
+            {
+                int converted;
+                converted = NumberConverter.RomanToInteger(inputTB.Text.ToUpper());
 
-            outputLB.Text = converted.ToString();
+                outputLB.Text = converted.ToString();
+            }
+            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
+
 
             
-            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string converted;
+                converted = ArabicToNumeral.ArabicToRoman(int.Parse(textBox1.Text));
 
+                label3.Text = converted.ToString();
+            }
 
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
