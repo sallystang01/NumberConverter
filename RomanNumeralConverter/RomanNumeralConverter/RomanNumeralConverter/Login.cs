@@ -32,30 +32,54 @@ namespace RomanNumeralConverter
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-
-            string username;
-            string password;
-
-            username = "Hunter";
-            password = "1234";
-            
-
-            if (tbUser.Text == username && tbPass.Text == password)
+            try
             {
-                Default frmDefault = new Default();
-                this.Hide();
-                frmDefault.Show();
-                
+                string username;
+                string password;
+
+                username = "Hunter";
+                password = "1234";
+
+                lblUser.Focus();
+                if (tbUser.Text == username && tbPass.Text == password)
+                {
+                    Default frmDefault = new Default();
+                    this.Hide();
+                    frmDefault.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please enter in a valid username or password");
+                }
+                tbUser.Focus();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter in a valid username or password");
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                Application.Exit();
+            }
+            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cbRemember_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbRemember.Checked == true)
+            {
+                tbUser.Text = "Hunter";
+                tbPass.Text = "1234";
+            }
         }
     }
 }

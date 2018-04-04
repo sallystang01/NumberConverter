@@ -12,6 +12,7 @@ namespace RomanNumeralConverter
 {
     public partial class Arabic_Converter : Form
     {
+
         public Arabic_Converter()
         {
             InitializeComponent();
@@ -19,13 +20,47 @@ namespace RomanNumeralConverter
 
         private void calculate2BTN_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                
+                string a;
+                string b;
+                
+                
+                
                 string converted;
                 converted = ArabicToNumeral.ArabicToRoman(int.Parse(arabicNumeralTB.Text));
 
+                //My variables a, b, and c to indicate objects I do not want within code.
+                a = "(";
+                b = ")";
+                
+                
+            
+
                 label3.Text = converted.ToString();
                 arabicNumeralTB.Focus();
+                if (label3.Text.Contains(a) == true && label3.Text.Contains(b) == true)
+                {
+                    lblInvalid.Text = "Please enter a number less than 4000!";
+                    lblInvalid.Visible = true;
+                    lblInvalid.ForeColor = Color.Red;
+                    lblOne.ForeColor = Color.Red;
+                    labelThree.ForeColor = Color.Red;
+
+
+                }
+                else if ((arabicNumeralTB.Text.Contains(a) == false && arabicNumeralTB.Text.Contains(b) == false))
+
+                {
+                    lblInvalid.Text = "Successful";
+                    lblInvalid.ForeColor = Color.Green;
+                    lblInvalid.Visible = true;
+                    lblOne.ForeColor = Color.Green;
+                    labelThree.ForeColor = Color.Green;
+
+                }
             }
 
             catch (Exception ex)
@@ -36,7 +71,7 @@ namespace RomanNumeralConverter
 
         private void romanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 frmArb = new Form1();
+            Roman frmArb = new Roman();
             this.Close();
             frmArb.Show();
         }
@@ -50,26 +85,59 @@ namespace RomanNumeralConverter
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
+            try
+            {
+                Application.Exit();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            arabicNumeralTB.Text = "";
-            label3.Text = "";
+            try
+            {
+                arabicNumeralTB.Text = "";
+                label3.Text = "";
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void getHelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Help frmHelp = new Help();
-            frmHelp.Show();
+
+            try
+            {
+                Help frmHelp = new Help();
+                frmHelp.Show();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Login frmLogin = new Login();
-            this.Close();
-            frmLogin.Show();
+        {try
+            {
+                Login frmLogin = new Login();
+                this.Close();
+                frmLogin.Show();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -10,15 +10,21 @@ using System.Windows.Forms;
 
 namespace RomanNumeralConverter
 {
-    public partial class Form1 : Form
+    public partial class Roman : Form
     {
-        public Form1()
+        public Roman()
         {
             InitializeComponent();
         }
 
         private void calculateBTN_Click(object sender, EventArgs e)
         {
+            NumberConverter romanConverter = new NumberConverter();
+
+            
+            
+            
+
             try
             {
                 int converted;

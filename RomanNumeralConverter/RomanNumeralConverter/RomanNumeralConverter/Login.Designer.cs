@@ -36,6 +36,7 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cbShowPass = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.cbRemember = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblUser
@@ -105,11 +106,23 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // cbRemember
+            // 
+            this.cbRemember.AutoSize = true;
+            this.cbRemember.Location = new System.Drawing.Point(126, 159);
+            this.cbRemember.Name = "cbRemember";
+            this.cbRemember.Size = new System.Drawing.Size(95, 17);
+            this.cbRemember.TabIndex = 7;
+            this.cbRemember.Text = "Remember Me";
+            this.cbRemember.UseVisualStyleBackColor = true;
+            this.cbRemember.CheckedChanged += new System.EventHandler(this.cbRemember_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 262);
+            this.Controls.Add(this.cbRemember);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbShowPass);
             this.Controls.Add(this.btnLogin);
@@ -134,5 +147,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox cbShowPass;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.CheckBox cbRemember;
     }
 }

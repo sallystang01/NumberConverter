@@ -19,7 +19,7 @@ namespace RomanNumeralConverter
 
         private void btnRoman_Click(object sender, EventArgs e)
         {
-            Form1 frmRoman = new Form1();
+            Roman frmRoman = new Roman();
             this.Hide();
             frmRoman.Show();
         }

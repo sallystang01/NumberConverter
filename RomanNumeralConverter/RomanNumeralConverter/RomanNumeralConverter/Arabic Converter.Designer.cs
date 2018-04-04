@@ -31,10 +31,10 @@
             this.calculate2BTN = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.arabicNumeralTB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.converterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +42,10 @@
             this.getHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblInvalid = new System.Windows.Forms.Label();
+            this.lblOne = new System.Windows.Forms.Label();
+            this.labelThree = new System.Windows.Forms.Label();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,15 +76,6 @@
             this.arabicNumeralTB.Size = new System.Drawing.Size(85, 20);
             this.arabicNumeralTB.TabIndex = 6;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Enter a value between 1 - 3999";
-            // 
             // msMenu
             // 
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -98,6 +92,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
+            this.toolStripSeparator1,
             this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -110,6 +105,13 @@
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.homeToolStripMenuItem.Text = "&Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoutToolStripMenuItem.Text = "&Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -167,12 +169,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // logoutToolStripMenuItem
+            // lblInvalid
             // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.logoutToolStripMenuItem.Text = "&Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            this.lblInvalid.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvalid.ForeColor = System.Drawing.Color.Red;
+            this.lblInvalid.Location = new System.Drawing.Point(12, 42);
+            this.lblInvalid.Name = "lblInvalid";
+            this.lblInvalid.Size = new System.Drawing.Size(260, 32);
+            this.lblInvalid.TabIndex = 15;
+            this.lblInvalid.Text = "Number exceeded 3999!";
+            this.lblInvalid.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblInvalid.Visible = false;
+            // 
+            // lblOne
+            // 
+            this.lblOne.AutoSize = true;
+            this.lblOne.Location = new System.Drawing.Point(74, 102);
+            this.lblOne.Name = "lblOne";
+            this.lblOne.Size = new System.Drawing.Size(13, 13);
+            this.lblOne.TabIndex = 16;
+            this.lblOne.Text = "1";
+            // 
+            // labelThree
+            // 
+            this.labelThree.AutoSize = true;
+            this.labelThree.Location = new System.Drawing.Point(189, 102);
+            this.labelThree.Name = "labelThree";
+            this.labelThree.Size = new System.Drawing.Size(31, 13);
+            this.labelThree.TabIndex = 17;
+            this.labelThree.Text = "3999";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // Arabic_Converter
             // 
@@ -180,13 +210,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.labelThree);
+            this.Controls.Add(this.lblOne);
+            this.Controls.Add(this.lblInvalid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.msMenu);
             this.Controls.Add(this.calculate2BTN);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.arabicNumeralTB);
-            this.Controls.Add(this.label1);
             this.Name = "Arabic_Converter";
             this.Text = "Arabic_Converter";
             this.msMenu.ResumeLayout(false);
@@ -201,7 +233,6 @@
         private System.Windows.Forms.Button calculate2BTN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox arabicNumeralTB;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -213,5 +244,9 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.Label lblInvalid;
+        private System.Windows.Forms.Label lblOne;
+        private System.Windows.Forms.Label labelThree;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
