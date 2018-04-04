@@ -18,3 +18,7 @@ C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeral
 C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.csproj.CoreCompileInputs.cache
 C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.exe
 C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.pdb
+C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Arabic_Converter.resources
+C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Default.resources
+C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Help.resources
+C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Login.resources

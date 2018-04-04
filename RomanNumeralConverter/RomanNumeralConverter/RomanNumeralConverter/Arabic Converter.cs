@@ -10,55 +10,35 @@ using System.Windows.Forms;
 
 namespace RomanNumeralConverter
 {
-    public partial class Form1 : Form
+    public partial class Arabic_Converter : Form
     {
-        public Form1()
+        public Arabic_Converter()
         {
             InitializeComponent();
         }
 
-        private void calculateBTN_Click(object sender, EventArgs e)
+        private void calculate2BTN_Click(object sender, EventArgs e)
         {
             try
             {
-                int converted;
-                converted = NumberConverter.RomanToInteger(romanNumeralTB.Text.ToUpper());
+                string converted;
+                converted = ArabicToNumeral.ArabicToRoman(int.Parse(arabicNumeralTB.Text));
 
-                outputLB.Text = converted.ToString();
-                romanNumeralTB.Focus();
+                label3.Text = converted.ToString();
+                arabicNumeralTB.Focus();
             }
-            
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
-
-
-
-            
         }
 
-       
-
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void romanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void arabicToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            Arabic_Converter frmArabic = new Arabic_Converter();
+            Form1 frmArb = new Form1();
             this.Close();
-            frmArabic.Show();
-            
+            frmArb.Show();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,8 +55,8 @@ namespace RomanNumeralConverter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            romanNumeralTB.Text = "";
-            outputLB.Text = "";
+            arabicNumeralTB.Text = "";
+            label3.Text = "";
         }
 
         private void getHelpToolStripMenuItem_Click(object sender, EventArgs e)

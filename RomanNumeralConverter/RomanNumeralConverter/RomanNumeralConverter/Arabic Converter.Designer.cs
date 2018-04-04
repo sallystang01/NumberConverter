@@ -1,6 +1,6 @@
 ﻿namespace RomanNumeralConverter
 {
-    partial class Form1
+    partial class Arabic_Converter
     {
         /// <summary>
         /// Required designer variable.
@@ -28,72 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.romanNumeralTB = new System.Windows.Forms.TextBox();
-            this.outputLB = new System.Windows.Forms.Label();
-            this.calculateBTN = new System.Windows.Forms.Button();
-            this.lblRoman = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.calculate2BTN = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.arabicNumeralTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.converterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.arabicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.romanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // romanNumeralTB
+            // calculate2BTN
             // 
-            this.romanNumeralTB.AccessibleName = "Enter a Roman Numeral";
-            this.romanNumeralTB.Location = new System.Drawing.Point(98, 105);
-            this.romanNumeralTB.Name = "romanNumeralTB";
-            this.romanNumeralTB.Size = new System.Drawing.Size(85, 20);
-            this.romanNumeralTB.TabIndex = 1;
+            this.calculate2BTN.Location = new System.Drawing.Point(98, 157);
+            this.calculate2BTN.Name = "calculate2BTN";
+            this.calculate2BTN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.calculate2BTN.Size = new System.Drawing.Size(85, 23);
+            this.calculate2BTN.TabIndex = 8;
+            this.calculate2BTN.Text = "Convert";
+            this.calculate2BTN.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.calculate2BTN.UseVisualStyleBackColor = true;
+            this.calculate2BTN.Click += new System.EventHandler(this.calculate2BTN_Click);
             // 
-            // outputLB
+            // label3
             // 
-            this.outputLB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.outputLB.Location = new System.Drawing.Point(98, 128);
-            this.outputLB.Name = "outputLB";
-            this.outputLB.Size = new System.Drawing.Size(85, 32);
-            this.outputLB.TabIndex = 2;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Location = new System.Drawing.Point(98, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 32);
+            this.label3.TabIndex = 5;
             // 
-            // calculateBTN
+            // arabicNumeralTB
             // 
-            this.calculateBTN.AccessibleDescription = "Converts the Roman Numeral to Arabic";
-            this.calculateBTN.AccessibleName = "Convert Button";
-            this.calculateBTN.Location = new System.Drawing.Point(98, 163);
-            this.calculateBTN.Name = "calculateBTN";
-            this.calculateBTN.Size = new System.Drawing.Size(85, 23);
-            this.calculateBTN.TabIndex = 2;
-            this.calculateBTN.Text = "Convert";
-            this.calculateBTN.UseVisualStyleBackColor = true;
-            this.calculateBTN.Click += new System.EventHandler(this.calculateBTN_Click);
+            this.arabicNumeralTB.Location = new System.Drawing.Point(98, 99);
+            this.arabicNumeralTB.Name = "arabicNumeralTB";
+            this.arabicNumeralTB.Size = new System.Drawing.Size(85, 20);
+            this.arabicNumeralTB.TabIndex = 6;
             // 
-            // lblRoman
+            // label1
             // 
-            this.lblRoman.AccessibleDescription = "Continue to the text box";
-            this.lblRoman.AccessibleName = "Roman Numeral Label";
-            this.lblRoman.AutoSize = true;
-            this.lblRoman.Location = new System.Drawing.Point(80, 89);
-            this.lblRoman.Name = "lblRoman";
-            this.lblRoman.Size = new System.Drawing.Size(120, 13);
-            this.lblRoman.TabIndex = 7;
-            this.lblRoman.Text = "Enter a Roman Numeral";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 247);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Enter a value between 1 - 3999";
             // 
             // msMenu
             // 
@@ -103,8 +90,8 @@
             this.helpToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(283, 24);
-            this.msMenu.TabIndex = 9;
+            this.msMenu.Size = new System.Drawing.Size(284, 24);
+            this.msMenu.TabIndex = 10;
             this.msMenu.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
@@ -129,22 +116,21 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // converterToolStripMenuItem
             // 
             this.converterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arabicToolStripMenuItem});
+            this.romanToolStripMenuItem});
             this.converterToolStripMenuItem.Name = "converterToolStripMenuItem";
             this.converterToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.converterToolStripMenuItem.Text = "Con&verter";
             // 
-            // arabicToolStripMenuItem
+            // romanToolStripMenuItem
             // 
-            this.arabicToolStripMenuItem.Name = "arabicToolStripMenuItem";
-            this.arabicToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.arabicToolStripMenuItem.Text = "&Arabic";
-            this.arabicToolStripMenuItem.Click += new System.EventHandler(this.arabicToolStripMenuItem_Click);
+            this.romanToolStripMenuItem.Name = "romanToolStripMenuItem";
+            this.romanToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.romanToolStripMenuItem.Text = "&Roman";
+            this.romanToolStripMenuItem.Click += new System.EventHandler(this.romanToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -163,13 +149,23 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(196, 247);
+            this.btnExit.Location = new System.Drawing.Point(197, 227);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 13;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // logoutToolStripMenuItem
             // 
@@ -178,23 +174,21 @@
             this.logoutToolStripMenuItem.Text = "&Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // Form1
+            // Arabic_Converter
             // 
-            this.AcceptButton = this.calculateBTN;
+            this.AcceptButton = this.calculate2BTN;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(283, 286);
-            this.Controls.Add(this.btnExit);
+            this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblRoman);
-            this.Controls.Add(this.calculateBTN);
-            this.Controls.Add(this.outputLB);
-            this.Controls.Add(this.romanNumeralTB);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.msMenu);
-            this.MainMenuStrip = this.msMenu;
-            this.Name = "Form1";
-            this.Text = "Roman Converter";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Controls.Add(this.calculate2BTN);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.arabicNumeralTB);
+            this.Controls.Add(this.label1);
+            this.Name = "Arabic_Converter";
+            this.Text = "Arabic_Converter";
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -204,21 +198,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox romanNumeralTB;
-        private System.Windows.Forms.Label outputLB;
-        private System.Windows.Forms.Button calculateBTN;
-        private System.Windows.Forms.Label lblRoman;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button calculate2BTN;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox arabicNumeralTB;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem converterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem arabicToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem romanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem getHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
-
