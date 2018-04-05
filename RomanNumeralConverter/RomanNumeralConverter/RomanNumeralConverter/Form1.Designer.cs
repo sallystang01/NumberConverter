@@ -36,6 +36,7 @@
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.converterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,33 +44,37 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.getHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // romanNumeralTB
             // 
             this.romanNumeralTB.AccessibleName = "Enter a Roman Numeral";
-            this.romanNumeralTB.Location = new System.Drawing.Point(98, 105);
+            this.romanNumeralTB.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.romanNumeralTB.Location = new System.Drawing.Point(68, 91);
             this.romanNumeralTB.Name = "romanNumeralTB";
-            this.romanNumeralTB.Size = new System.Drawing.Size(85, 20);
+            this.romanNumeralTB.Size = new System.Drawing.Size(155, 23);
             this.romanNumeralTB.TabIndex = 1;
+            this.romanNumeralTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // outputLB
             // 
             this.outputLB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.outputLB.Location = new System.Drawing.Point(98, 128);
+            this.outputLB.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLB.Location = new System.Drawing.Point(68, 128);
             this.outputLB.Name = "outputLB";
-            this.outputLB.Size = new System.Drawing.Size(85, 32);
+            this.outputLB.Size = new System.Drawing.Size(155, 32);
             this.outputLB.TabIndex = 2;
+            this.outputLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // calculateBTN
             // 
             this.calculateBTN.AccessibleDescription = "Converts the Roman Numeral to Arabic";
             this.calculateBTN.AccessibleName = "Convert Button";
-            this.calculateBTN.Location = new System.Drawing.Point(98, 163);
+            this.calculateBTN.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateBTN.Location = new System.Drawing.Point(89, 177);
             this.calculateBTN.Name = "calculateBTN";
-            this.calculateBTN.Size = new System.Drawing.Size(85, 23);
+            this.calculateBTN.Size = new System.Drawing.Size(117, 43);
             this.calculateBTN.TabIndex = 2;
             this.calculateBTN.Text = "Convert";
             this.calculateBTN.UseVisualStyleBackColor = true;
@@ -80,14 +85,16 @@
             this.lblRoman.AccessibleDescription = "Continue to the text box";
             this.lblRoman.AccessibleName = "Roman Numeral Label";
             this.lblRoman.AutoSize = true;
-            this.lblRoman.Location = new System.Drawing.Point(80, 89);
+            this.lblRoman.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoman.Location = new System.Drawing.Point(64, 57);
             this.lblRoman.Name = "lblRoman";
-            this.lblRoman.Size = new System.Drawing.Size(120, 13);
+            this.lblRoman.Size = new System.Drawing.Size(159, 19);
             this.lblRoman.TabIndex = 7;
             this.lblRoman.Text = "Enter a Roman Numeral";
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(13, 247);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -104,7 +111,7 @@
             this.helpToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(283, 24);
+            this.msMenu.Size = new System.Drawing.Size(283, 25);
             this.msMenu.TabIndex = 9;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -115,28 +122,34 @@
             this.toolStripSeparator1,
             this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 21);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.homeToolStripMenuItem.Text = "&Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.logoutToolStripMenuItem.Text = "&Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -144,14 +157,15 @@
             // 
             this.converterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arabicToolStripMenuItem});
+            this.converterToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.converterToolStripMenuItem.Name = "converterToolStripMenuItem";
-            this.converterToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.converterToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
             this.converterToolStripMenuItem.Text = "Con&verter";
             // 
             // arabicToolStripMenuItem
             // 
             this.arabicToolStripMenuItem.Name = "arabicToolStripMenuItem";
-            this.arabicToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.arabicToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.arabicToolStripMenuItem.Text = "&Arabic";
             this.arabicToolStripMenuItem.Click += new System.EventHandler(this.arabicToolStripMenuItem_Click);
             // 
@@ -159,19 +173,21 @@
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.getHelpToolStripMenuItem});
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // getHelpToolStripMenuItem
             // 
             this.getHelpToolStripMenuItem.Name = "getHelpToolStripMenuItem";
-            this.getHelpToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.getHelpToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.getHelpToolStripMenuItem.Text = "&Get Help!";
             this.getHelpToolStripMenuItem.Click += new System.EventHandler(this.getHelpToolStripMenuItem_Click);
             // 
             // btnExit
             // 
+            this.btnExit.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(196, 247);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
@@ -179,11 +195,6 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // Roman
             // 

@@ -34,6 +34,7 @@
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.converterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,36 +46,39 @@
             this.lblInvalid = new System.Windows.Forms.Label();
             this.lblOne = new System.Windows.Forms.Label();
             this.labelThree = new System.Windows.Forms.Label();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // calculate2BTN
             // 
-            this.calculate2BTN.Location = new System.Drawing.Point(98, 157);
+            this.calculate2BTN.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculate2BTN.Location = new System.Drawing.Point(56, 166);
             this.calculate2BTN.Name = "calculate2BTN";
             this.calculate2BTN.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.calculate2BTN.Size = new System.Drawing.Size(85, 23);
+            this.calculate2BTN.Size = new System.Drawing.Size(161, 41);
             this.calculate2BTN.TabIndex = 8;
             this.calculate2BTN.Text = "Convert";
-            this.calculate2BTN.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.calculate2BTN.UseVisualStyleBackColor = true;
             this.calculate2BTN.Click += new System.EventHandler(this.calculate2BTN_Click);
             // 
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(98, 122);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(56, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 32);
+            this.label3.Size = new System.Drawing.Size(161, 32);
             this.label3.TabIndex = 5;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // arabicNumeralTB
             // 
-            this.arabicNumeralTB.Location = new System.Drawing.Point(98, 99);
+            this.arabicNumeralTB.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.arabicNumeralTB.Location = new System.Drawing.Point(56, 96);
             this.arabicNumeralTB.Name = "arabicNumeralTB";
-            this.arabicNumeralTB.Size = new System.Drawing.Size(85, 20);
+            this.arabicNumeralTB.Size = new System.Drawing.Size(161, 23);
             this.arabicNumeralTB.TabIndex = 6;
+            this.arabicNumeralTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // msMenu
             // 
@@ -84,7 +88,7 @@
             this.helpToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(284, 24);
+            this.msMenu.Size = new System.Drawing.Size(284, 25);
             this.msMenu.TabIndex = 10;
             this.msMenu.Text = "menuStrip1";
             // 
@@ -95,42 +99,49 @@
             this.toolStripSeparator1,
             this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 21);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.homeToolStripMenuItem.Text = "&Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(110, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.logoutToolStripMenuItem.Text = "&Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // converterToolStripMenuItem
             // 
             this.converterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.romanToolStripMenuItem});
+            this.converterToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.converterToolStripMenuItem.Name = "converterToolStripMenuItem";
-            this.converterToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.converterToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
             this.converterToolStripMenuItem.Text = "Con&verter";
             // 
             // romanToolStripMenuItem
             // 
             this.romanToolStripMenuItem.Name = "romanToolStripMenuItem";
-            this.romanToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.romanToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.romanToolStripMenuItem.Text = "&Roman";
             this.romanToolStripMenuItem.Click += new System.EventHandler(this.romanToolStripMenuItem_Click);
             // 
@@ -138,19 +149,21 @@
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.getHelpToolStripMenuItem});
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(45, 21);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // getHelpToolStripMenuItem
             // 
             this.getHelpToolStripMenuItem.Name = "getHelpToolStripMenuItem";
-            this.getHelpToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.getHelpToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.getHelpToolStripMenuItem.Text = "&Get Help!";
             this.getHelpToolStripMenuItem.Click += new System.EventHandler(this.getHelpToolStripMenuItem_Click);
             // 
             // btnExit
             // 
+            this.btnExit.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(197, 227);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
@@ -161,6 +174,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(12, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -171,9 +185,9 @@
             // 
             // lblInvalid
             // 
-            this.lblInvalid.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvalid.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInvalid.ForeColor = System.Drawing.Color.Red;
-            this.lblInvalid.Location = new System.Drawing.Point(12, 42);
+            this.lblInvalid.Location = new System.Drawing.Point(8, 61);
             this.lblInvalid.Name = "lblInvalid";
             this.lblInvalid.Size = new System.Drawing.Size(260, 32);
             this.lblInvalid.TabIndex = 15;
@@ -184,25 +198,22 @@
             // lblOne
             // 
             this.lblOne.AutoSize = true;
-            this.lblOne.Location = new System.Drawing.Point(74, 102);
+            this.lblOne.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOne.Location = new System.Drawing.Point(38, 99);
             this.lblOne.Name = "lblOne";
-            this.lblOne.Size = new System.Drawing.Size(13, 13);
+            this.lblOne.Size = new System.Drawing.Size(12, 15);
             this.lblOne.TabIndex = 16;
             this.lblOne.Text = "1";
             // 
             // labelThree
             // 
             this.labelThree.AutoSize = true;
-            this.labelThree.Location = new System.Drawing.Point(189, 102);
+            this.labelThree.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThree.Location = new System.Drawing.Point(223, 99);
             this.labelThree.Name = "labelThree";
-            this.labelThree.Size = new System.Drawing.Size(31, 13);
+            this.labelThree.Size = new System.Drawing.Size(35, 15);
             this.labelThree.TabIndex = 17;
             this.labelThree.Text = "3999";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // Arabic_Converter
             // 

@@ -26,7 +26,7 @@ namespace RomanNumeralConverter
                 //Establishes the connection to the database
 
                 //connString is just the connection string
-                string connString = "Server=DTPLAPTOP12;Database=Numeric;Trusted_Connection=True;";
+                string connString = "Server=PL09\\MTCDB;Database=Numeric;Trusted_Connection=True;";
                 //New connection using connString
                 SqlConnection sqlAccounts = new SqlConnection(connString);
 
