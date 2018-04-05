@@ -33,51 +33,56 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cbShowPass = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.cbRemember = new System.Windows.Forms.CheckBox();
+            this.btnCreateAcc = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(22, 84);
+            this.lblUser.Location = new System.Drawing.Point(22, 47);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(86, 21);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Username:";
+            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(22, 109);
+            this.lblPass.Location = new System.Drawing.Point(22, 72);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(81, 21);
             this.lblPass.TabIndex = 1;
             this.lblPass.Text = "Password:";
+            this.lblPass.Click += new System.EventHandler(this.lblPass_Click);
             // 
             // tbUser
             // 
             this.tbUser.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUser.Location = new System.Drawing.Point(128, 85);
+            this.tbUser.Location = new System.Drawing.Point(128, 48);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(100, 23);
             this.tbUser.TabIndex = 2;
+            this.tbUser.TextChanged += new System.EventHandler(this.tbUser_TextChanged);
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(128, 114);
+            this.tbPass.Location = new System.Drawing.Point(128, 77);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(100, 20);
             this.tbPass.TabIndex = 3;
             this.tbPass.UseSystemPasswordChar = true;
+            this.tbPass.TextChanged += new System.EventHandler(this.tbPass_TextChanged);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(239, 84);
+            this.btnLogin.Location = new System.Drawing.Point(239, 47);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 50);
             this.btnLogin.TabIndex = 4;
@@ -88,7 +93,7 @@
             // cbShowPass
             // 
             this.cbShowPass.AutoSize = true;
-            this.cbShowPass.Location = new System.Drawing.Point(126, 140);
+            this.cbShowPass.Location = new System.Drawing.Point(126, 103);
             this.cbShowPass.Name = "cbShowPass";
             this.cbShowPass.Size = new System.Drawing.Size(102, 17);
             this.cbShowPass.TabIndex = 5;
@@ -98,7 +103,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(239, 140);
+            this.btnExit.Location = new System.Drawing.Point(131, 203);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 26);
             this.btnExit.TabIndex = 6;
@@ -109,19 +114,44 @@
             // cbRemember
             // 
             this.cbRemember.AutoSize = true;
-            this.cbRemember.Location = new System.Drawing.Point(126, 159);
+            this.cbRemember.Location = new System.Drawing.Point(126, 122);
             this.cbRemember.Name = "cbRemember";
             this.cbRemember.Size = new System.Drawing.Size(95, 17);
             this.cbRemember.TabIndex = 7;
             this.cbRemember.Text = "Remember Me";
             this.cbRemember.UseVisualStyleBackColor = true;
+            this.cbRemember.Visible = false;
             this.cbRemember.CheckedChanged += new System.EventHandler(this.cbRemember_CheckedChanged);
+            // 
+            // btnCreateAcc
+            // 
+            this.btnCreateAcc.Location = new System.Drawing.Point(239, 103);
+            this.btnCreateAcc.Name = "btnCreateAcc";
+            this.btnCreateAcc.Size = new System.Drawing.Size(75, 50);
+            this.btnCreateAcc.TabIndex = 8;
+            this.btnCreateAcc.Text = "Create Account";
+            this.btnCreateAcc.UseVisualStyleBackColor = true;
+            this.btnCreateAcc.Click += new System.EventHandler(this.btnCreateAcc_Click);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(55, 169);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(227, 21);
+            this.lblError.TabIndex = 9;
+            this.lblError.Text = "Username/Password Incorrect";
+            this.lblError.Visible = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 262);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.btnCreateAcc);
             this.Controls.Add(this.cbRemember);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbShowPass);
@@ -144,9 +174,10 @@
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Button btnLogin;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox cbShowPass;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.CheckBox cbRemember;
+        private System.Windows.Forms.Button btnCreateAcc;
+        private System.Windows.Forms.Label lblError;
     }
 }

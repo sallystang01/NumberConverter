@@ -22,3 +22,4 @@ C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeral
 C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Help.resources
 C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Login.resources
 C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.Roman.resources
+C:\Data\NumberConverter\RomanNumeralConverter\RomanNumeralConverter\RomanNumeralConverter\obj\Debug\RomanNumeralConverter.CreateAccount.resources
