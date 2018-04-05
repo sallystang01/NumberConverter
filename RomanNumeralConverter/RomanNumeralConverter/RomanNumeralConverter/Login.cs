@@ -21,6 +21,7 @@ namespace RomanNumeralConverter
 
         private void cbShowPass_CheckedChanged(object sender, EventArgs e)
         {
+            //If box checked, turn off UseSystemPasswordChar. Else, keep it on.
             if (cbShowPass.Checked)
             {
                 tbPass.UseSystemPasswordChar = false;
@@ -164,6 +165,7 @@ namespace RomanNumeralConverter
 
         private void btnCreateAcc_Click(object sender, EventArgs e)
         {
+            //Closes current form and opens Create Account form.
             CreateAccount frmCA = new CreateAccount();
             this.Hide();
             frmCA.Show();

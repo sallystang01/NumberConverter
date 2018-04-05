@@ -19,6 +19,7 @@ namespace RomanNumeralConverter
 
         private void btnRoman_Click(object sender, EventArgs e)
         {
+            //Opens the Roman converter and closes current form
             Roman frmRoman = new Roman();
             this.Hide();
             frmRoman.Show();
@@ -26,6 +27,7 @@ namespace RomanNumeralConverter
 
         private void btnArabic_Click(object sender, EventArgs e)
         {
+            //Opens the Arabic converter and closes the current form
             Arabic_Converter frmArab = new Arabic_Converter();
             this.Hide();
             frmArab.Show();
@@ -33,16 +35,19 @@ namespace RomanNumeralConverter
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Exits the application
             Application.Exit();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //Exits the application
             Application.Exit();
         }
 
         private void programSpecificationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Opens the help form
             Help frmHelp = new Help();
             frmHelp.Show();
         }
@@ -54,6 +59,7 @@ namespace RomanNumeralConverter
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            //Logs the user out, closes the current form and opens the Login form.
             Login frmLogin = new Login();
             this.Close();
             frmLogin.Show();
@@ -62,6 +68,7 @@ namespace RomanNumeralConverter
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Logs the user out, closes the current form and opens the Login form.
             Login frmLogin = new Login();
             this.Close();
             frmLogin.Show();
