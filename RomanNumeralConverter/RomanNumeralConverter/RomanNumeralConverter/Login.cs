@@ -105,7 +105,7 @@ namespace RomanNumeralConverter
 
             }
 
-            
+            // Displays exception
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -113,8 +113,8 @@ namespace RomanNumeralConverter
         }
 
         private void btnExit_Click(object sender, EventArgs e)
-        {
-            try
+        { // Closes the app when exit button is clicked
+            try 
             {
                 Application.Exit();
             }
@@ -127,6 +127,7 @@ namespace RomanNumeralConverter
 
         private void cbRemember_CheckedChanged(object sender, EventArgs e)
         {
+            //Easy login
             if (cbRemember.Checked == true)
             {
                 tbUser.Text = "Hunter";

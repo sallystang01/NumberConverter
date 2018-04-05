@@ -19,6 +19,7 @@ namespace RomanNumeralConverter
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //Closes app
             this.Close();
         }
     }
